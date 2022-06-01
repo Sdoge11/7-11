@@ -1,0 +1,95 @@
+<nav class="navbar navbar-default navbar-fixed-bottom mfoot_box">
+  <div class="mfoot_nav"><a href="/"><span class="glyphicon glyphicon-home btn-lg" aria-hidden="true"></span>首页</a></div>
+  <div class="mfoot_nav"> <a href="tel:{dede:global.cfg_tel/}"> <span class="glyphicon glyphicon-phone btn-lg" aria-hidden="true"></span>手机 </a> </div>
+  <div class="mfoot_nav"  aria-hidden="true"  data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="glyphicon glyphicon-th-list btn-lg"></span>分类 </div>
+  <div class="mfoot_nav"> <a id="gototop" href="#"> <span class="glyphicon glyphicon-circle-arrow-up btn-lg" aria-hidden="true"></span>顶部 </a> </div>
+</nav>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 col-md-3"> <img class="footer_logo" src="/skin/images/logo_f.png" alt="底部LOGO">
+        <p class="footer_logo_text">
+        <p> {dede:global.cfg_powerby/} <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">{dede:global.cfg_beian/}</a> </p>
+        </p>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-3 footer_contact">
+        <p> 联系人：{dede:global.cfg_lxr/} </p>
+        <p> 手机：{dede:global.cfg_mob/} </p>
+        <p> 电话：{dede:global.cfg_tel/} </p>
+        <p> 邮箱：{dede:global.cfg_email/} </p>
+        <p> 地址：{dede:global.cfg_add/}</p>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        {dede:channelartlist typeid='1,4,9'}
+		<div class="col-xs-4 col-md-4 footer_menu">
+          <p class="footer_menu_first"><a href="{dede:field.typeurl/}">{dede:field.typename/}</a></p>
+          {dede:channel type=son noself='yes'}
+          <p ><a href="[field:typelink/]">[field:typename/]</a></p>
+          {/dede:channel}
+        </div>
+        {/dede:channelartlist}
+      </div>
+      <div class="col-xs-12 col-sm-2 col-md-2"> <img class="footer_qrcode" src="/skin/images/ewm.png" alt="二维码图片">
+        <p class="footer_qrcode_text">手机二维码</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--客服面板-->
+<link rel="stylesheet" type="text/css" href="/skin/css/online.css" />
+<div id="cmsFloatPanel">
+  <div class="ctrolPanel"> <a class="service" href="#"></a> <a class="message" href="#"></a> <a class="qrcode" href="#"></a> <a class="arrow" title="返回顶部" href="#"></a> </div>
+  <div class="servicePanel">
+    <div class="servicePanel-inner">
+      <div class="serviceMsgPanel">
+        <div class="serviceMsgPanel-hd"><a href="#"><span>关闭</span></a></div>
+        <div class="serviceMsgPanel-bd"> 
+          <!--在线QQ--> 
+          <!--在线QQ-->
+          <div class="msggroup"> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={dede:global.cfg_qq/}&site=qq&menu=yes"><img border="0" src="/skin/images/qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息" /></a> </div>
+          <div class="msggroup"> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={dede:global.cfg_qq/}&site=qq&menu=yes"><img border="0" src="/skin/images/qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息" /></a> </div>
+		  <div class="msggroup"> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={dede:global.cfg_qq/}&site=qq&menu=yes"><img border="0" src="/skin/images/qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息" /></a> </div>
+        </div>
+        <div class="serviceMsgPanel-ft"></div>
+      </div>
+      <div class="arrowPanel">
+        <div class="arrow02"></div>
+      </div>
+    </div>
+  </div>
+  <div class="messagePanel">
+    <div class="messagePanel-inner">
+      <div class="formPanel">
+        <div class="formPanel-bd"> 
+          <div class="bdsharebuttonbox" style="display: inline-block; float:left;"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+          <a type="button" class="btn btn-default btn-xs" href="#" style="margin: 12px 0px 0px 10px;">关闭</a> </div>
+      </div>
+	  <script>
+            window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+      </script>
+      <div class="arrowPanel">
+        <div class="arrow01"></div>
+        <div class="arrow02"></div>
+      </div>
+    </div>
+  </div>
+  <div class="qrcodePanel">
+    <div class="qrcodePanel-inner">
+      <div class="codePanel">
+        <div class="codePanel-hd"><span style="float:left">用手机扫描二维码</span><a href="#"><span>关闭</span></a></div>
+        <div class="codePanel-bd"> <img src="/skin/images/ewm.png" alt="二维码"/> </div>
+      </div>
+      <div class="arrowPanel">
+        <div class="arrow01"></div>
+        <div class="arrow02"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/skin/js/online.js"></script>
+<div class="link_box">
+  <div class="container"> <span class="link_title">友情链接</span>
+    <button id="link_btn" class="glyphicon glyphicon-plus" aria-hidden="true"></button>
+    <span class="link_list">{dede:flink row='100' type='text' titlelen="50"  typeid="0"}[field:link /]{/dede:flink}</span> </div>
+</div>

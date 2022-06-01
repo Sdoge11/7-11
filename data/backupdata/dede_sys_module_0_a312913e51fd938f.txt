@@ -1,0 +1,2 @@
+INSERT INTO `dede_sys_module` VALUES('4','b437d85a7a7bc778c9c79b5ec36ab9aa','友情链接','','','0','');
+INSERT INTO `dede_sys_module` VALUES('8','a9e11e317613f278919bd621d0f4a0b8','幻灯管理','','','0','');

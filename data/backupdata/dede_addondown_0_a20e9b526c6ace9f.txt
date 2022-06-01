@@ -1,0 +1,6 @@
+INSERT INTO `dede_addondown` VALUES('22','13','','','127.0.0.1','/uploads/soft/210420/fujian.pdf');
+INSERT INTO `dede_addondown` VALUES('23','13','','','127.0.0.1','/uploads/soft/210420/fujian.pdf');
+INSERT INTO `dede_addondown` VALUES('24','13','','','127.0.0.1','/uploads/soft/210420/fujian.pdf');
+INSERT INTO `dede_addondown` VALUES('25','13','','','127.0.0.1','/uploads/soft/210420/fujian.pdf');
+INSERT INTO `dede_addondown` VALUES('26','13','','','127.0.0.1','/uploads/soft/210420/fujian.pdf');
+INSERT INTO `dede_addondown` VALUES('27','13','','','127.0.0.1','/uploads/soft/210420/fujian.pdf');

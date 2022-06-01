@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="applicable-device" content="pc,mobile" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="/skin/css/bootstrap.css" rel="stylesheet" />
+<link href="/skin/css/bxslider.css" rel="stylesheet" />
+<link href="/skin/css/style.css" rel="stylesheet" />
+<script src="/skin/js/jquery.min.js"></script>
+<script src="/skin/js/bxslider.min.js"></script>
+<script src="/skin/js/common.js"></script>
+<script src="/skin/js/app.js"></script>
+<script src="/skin/js/bootstrap.js"></script>
+<!--[if lt IE 9]><script src="/skin/js/html5shiv.min.js"></script><script src="/skin/js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="page_bg" style="background: url(/skin/images/inb{dede:field.typeid function='GetTopid(@me)'/}.jpg) center top no-repeat;"></div>
+<div class="bread_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="bread_nav"> <span>您的位置：</span>{dede:field name='position'/}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row"> 
+    <!-- right -->
+    <div class="col-xs-12 col-sm-8 col-md-9" style="float:right">
+      <div class="right_head">
+        <h2><span> {dede:field name='typename'/}</span></h2>
+      </div>
+      <div class="feedback">
+		<form class="form-horizontal" action="/plus/diy.php" enctype="multipart/form-data" method="post">
+	  	  <input type="hidden" name="action" value="post" />
+		  <input type="hidden" name="diyid" value="1" />
+		  <input type="hidden" name="do" value="2" />
+		  <div class="form-group">
+			<label for="title" class="col-sm-3 control-label">您的姓名: </label>
+			<div class="col-sm-6">
+			  <input type="text" name='name' id='name' value="" class="form-control" placeholder="" /><font style='color:red'>*</font>
+			</div>
+		  </div>
+		  <div class="form-group">
+			<label for="title" class="col-sm-3 control-label">联系电话: </label>
+			<div class="col-sm-6">
+			  <input type="text" name='tel' id='tel' value="" class="form-control" placeholder="" /><font style='color:red'>*</font>
+			</div>
+		  </div>
+		  <div class="form-group">
+			<label for="title" class="col-sm-3 control-label">电子邮箱: </label>
+			<div class="col-sm-6">
+			  <input type="text" name='email' id='email' value="" class="form-control" placeholder="" /><font style='color:red'>*</font>
+			</div>
+		  </div>
+		  <div class="form-group">
+			<label for="contents" class="col-sm-3 control-label">留言内容: </label>
+			<div class="col-sm-6">
+			  <textarea name='content' id='content' class="form-control" rows="3"></textarea>
+			</div>
+		  </div>
+		  
+          <input type="hidden" name="liuyanshijian" id="liuyanshijian" value="{dede:php} echo $showtime=date('Y-m-d H:i:s');{/dede:php}">
+		  <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,multitext;liuyanshijian,text" />
+			<input type="hidden" name="dede_fieldshash" value="e0e1e536bbb2c8244fac8932415e7679" /> 
+		  <div class="form-group">
+			<div class="col-sm-offset-3 col-sm-10">
+			  <input type="submit" class="btn btn-primary" value="提交表单" id="tj">
+			  &nbsp;
+			  <input type="reset" class="btn btn-default grey-btn" value="重新填写">
+			</div>
+		  </div>
+		</form>
+	  </div>
+    </div>
+    <!-- left -->
+    {dede:include filename="left.htm"/}
+  </div>
+</div>
+<script src="/skin/js/jquery.smoove.min.js"></script> 
+<script>$('.product_head,.product_img,.left_nav,.case_head,.case_img,.advantage_head,.advantage_right,.advantage_left,.news_head,.news_ul,.answer_ul,.about_head,.js_about_left,.js_about_right,.cooperation_head,.cooperation_img').smoove({offset:'10%'});</script>
+{dede:include filename="footer.htm"/}
+<script>
+	$(function(){
+		$('#tj').click(function(){
+			//alert(1)
+			if($('#name').val()==''){alert('请输入您的姓名！'); $("#name").focus(); return false;}
+			if ($("#tel").val() == "") { alert("请输入你的手机！"); $("#tel").focus(); return false; } 
+			if (!$("#tel").val().match(/^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/)) { alert("手机号码格式不正确！"); $("#tel").focus(); return false;} 
+			if ($("#email").val() == "") { alert("请输入电子邮箱!"); return false; } 
+			if (!$("#email").val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)) { alert("电子邮箱格式不正确"); $("#email").focus(); return false; } 
+			if($('#content').val()==''){alert('请输入留言内容！');return false;}
+		})
+	})
+</script>
+</body>
+</html>

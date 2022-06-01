@@ -1,0 +1,25 @@
+<header> 
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">导航菜单</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a href="/"><img src="/skin/images/logo.png" class="logo" alt="{dede:global.cfg_cname/}" /></a>
+	  </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">首 页</a> </li>
+		  {dede:channelArtlist  typeid=top currentstyle='active' row=7}
+		  <li {dede:field name=typeid runphp='yes'}global $dsql;$sql = "SELECT id From `dede_arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";$row = $dsql->GetOne($sql);@me=is_array($row)?'class="dropdown "':'';{/dede:field} ><a class='{dede:field.currentstyle/}' href="{dede:field.typeurl/}">{dede:field.typename/}</a>
+			{dede:field name=typeid runphp='yes'}global $dsql;$sql = "SELECT id From `dede_arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";$row = $dsql->GetOne($sql);@me=is_array($row)?'<a id="app_menudown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-down btn-xs"></span></a><ul class="dropdown-menu nav_small" role="menu">':'';{/dede:field}
+              {dede:channel type=son noself='yes'}
+			  <li><a href="[field:typelink/]">[field:typename/]</a></li>
+              {/dede:channel}
+			{dede:field name=typeid runphp='yes'}global $dsql;$sql = "SELECT id From `dede_arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";$row = $dsql->GetOne($sql);@me=is_array($row)?'</ul>':'';{/dede:field}
+          </li>
+          {/dede:channelArtlist}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
